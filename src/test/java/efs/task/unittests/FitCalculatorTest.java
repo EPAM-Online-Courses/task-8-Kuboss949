@@ -82,7 +82,7 @@ class FitCalculatorTest {
     }
     @ParameterizedTest(name = "Test case [{index}]: weight = {0}, height = {1}")
     @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
-    void shouldReturnFalse_whenBMICorrect2(double weight, double height){
+    void shouldReturnFalse_whenReadDataFromCSV(double weight, double height){
 
         //when
         boolean isCorrect = FitCalculator.isBMICorrect(weight, height);
@@ -93,7 +93,7 @@ class FitCalculatorTest {
 
 
     @Test
-    void shouldReturnUser1_79h_97_3w_whenTEST_USERS_LISTGiven(){
+    void shouldReturnProperUser_whenTestUsersListGiven(){
         //given
         var userList = TestConstants.TEST_USERS_LIST;
         //when
@@ -117,7 +117,7 @@ class FitCalculatorTest {
     }
 
     @Test
-    void shouldReturnTEST_USERS_BMI_SCORE_whenTEST_USERS_LISTGiven(){
+    void shouldReturnTestUsersBMIScore_whenTestUsersListGiven(){
         //given
         var userList = TestConstants.TEST_USERS_LIST;
         //when

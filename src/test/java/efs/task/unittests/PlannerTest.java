@@ -19,7 +19,7 @@ class PlannerTest {
     }
     @ParameterizedTest
     @EnumSource(ActivityLevel.class)
-    void shouldReturnCALORIES_ON_ACTIVITY_LEVELValues_whenTEST_USERGiven(ActivityLevel activityLevel){
+    void shouldReturnCaloriesOnActivityLevelValues_whenTestUserGiven(ActivityLevel activityLevel){
         //given
         User marcin = TestConstants.TEST_USER;
         int expectedValue = TestConstants.CALORIES_ON_ACTIVITY_LEVEL.get(activityLevel);
@@ -30,7 +30,7 @@ class PlannerTest {
     }
 
     @Test
-    void shouldReturnTEST_USER_DAILY_INTAKE_whenTEST_USERGiven(){
+    void shouldReturnTestUserDailyIntake_whenTestUserGiven(){
         //given
         User marcin = TestConstants.TEST_USER;
         //when
